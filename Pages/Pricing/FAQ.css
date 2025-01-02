@@ -1,0 +1,215 @@
+
+/* FAQ Section */
+.faq-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 40px;
+    background-color: transparent; /* Slightly darker background for FAQ section */
+    border-radius: 10px;
+    margin-top: 50px;
+    gap: 20px;
+  }
+  
+  /* FAQ Header Styles */
+  .faq-header {
+    flex: 1;
+    text-align: left; /* Align header text to the left */
+    color: #fff;
+  }
+  
+  .faq-header h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #440961; /* Yellow accent color */
+  }
+  
+  .faq-header h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: #fff;
+  }
+  
+  .faq-header p {
+    color: #aaa; /* Light gray for description text */
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  
+  .contact-button {
+    background-color: #440961; /* Yellow button */
+    color: #000; /* Black text */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  .contact-button:hover {
+    background-color: #440961; /* Slightly darker yellow on hover */
+  }
+  
+  /* FAQ List Styles */
+  .faq-list {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: left; /* Align FAQ list items to the left */
+    color: #fff;
+  }
+  
+  .faq-item {
+    background-color:#1111116e; /* Dark gray background for FAQ item */
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #555; /* Medium gray border */
+  }
+  
+  .faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .faq-question h3 {
+    font-size: 18px;
+    margin: 0;
+  }
+  
+  .toggle-button {
+    background-color: transparent;
+    border: none;
+    font-size: 18px;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .faq-answer {
+    margin-top: 10px;
+    font-size: 16px;
+    color: white; /* Light gray for FAQ answer */
+  }
+.animate-btn {
+    padding: 10px 20px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    height: 57px;
+    width: 300px;
+    position: relative;
+    font-size: 18px;
+    background-color: #440961;
+    font-weight: 700;
+    color: white;
+    font-family: sans-serif;
+    border-radius: 14px;
+    transition: transform 1.3s ease, background-color 0.3s ease, color 0.3s ease;
+    z-index: 2;
+    overflow: hidden; /* Ensures bars don't overflow the button */
+}
+
+.animate-btn:hover {
+    transform: translateY(-5px);
+    background-color: #440961; /* Slight color change on hover */
+    color: white;
+}
+
+/* Base styles for the bars */
+.animate-btn::before,
+.animate-btn::after {
+    content: "";
+    position: absolute;
+    width: 3px;
+    background-color: white;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 0; /* Initially hidden */
+}
+
+/* Larger bar on the left */
+.animate-btn::before {
+    left: 80px;
+    top: 50%;
+    transform: translateY(-50%) scaleY(0); /* Initially hidden */
+    height: 22px;
+}
+
+/* Larger bar on the right */
+.animate-btn::after {
+    right: 80px;
+    top: 50%;
+    transform: translateY(-50%) scaleY(0); /* Initially hidden */
+    height: 22px;
+}
+
+/* Smaller bar on the left */
+.animate-extra-bar-left {
+    position: absolute;
+    left: 73px;
+    top: 50%;
+    transform: translateY(-50%) scaleY(0); /* Initially hidden */
+    height: 13px;
+    width: 3px;
+    background-color: white;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 0; /* Initially hidden */
+}
+
+/* Smaller bar on the right */
+.animate-extra-bar-right {
+    position: absolute;
+    right: 73px;
+    top: 50%;
+    transform: translateY(-50%) scaleY(0); /* Initially hidden */
+    height: 13px;
+    width: 3px;
+    background-color: white;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 0; /* Initially hidden */
+}
+
+/* Hover effect to reveal the bars */
+.animate-btn:hover::before,
+.animate-btn:hover::after,
+.animate-btn:hover .animate-extra-bar-left,
+.animate-btn:hover .animate-extra-bar-right {
+    transform: translateY(-50%) scaleY(1); /* Grow the bars */
+    opacity: 1; /* Make them visible */
+}
+/* Responsive Design for Mobile Screens */
+@media only screen and (max-width: 768px) {
+    .faq-section {
+      display: flex;
+      flex-direction: column; /* Stack FAQ list and content vertically */
+      align-items: center;
+    }
+  
+    .faq-list {
+      order: 1; /* Display FAQ list first */
+      width: 100%; /* Full width for mobile */
+    }
+  
+    .toggle-buttons {
+      order: 2; /* Display toggle buttons second */
+      width: 100%; /* Full width for mobile */
+      margin-top: 20px; /* Add spacing between FAQ list and buttons */
+    }
+  }
+  
+  /* Additional Adjustments for Smaller Screens */
+  @media only screen and (max-width: 480px) {
+    .price-toggle {
+      width: 80%; /* Adjust button width for smaller screens */
+    }
+  
+    .faq-list {
+      font-size: 14px; /* Reduce text size for FAQ list */
+    }
+  
+    .toggle-buttons {
+      font-size: 14px; /* Adjust button text size */
+    }
+  }
+

@@ -1,0 +1,507 @@
+.mains {
+    background-color: rgba(124, 93, 162, 1);
+    padding: 0;
+    margin: 0;
+    height: 570px;
+    transform: translateY(50px);
+    animation: moveUp 1s ease-out forwards;
+}
+
+@keyframes moveUp {
+    0% {
+        transform: translateY(50px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.bg-bck {
+    width: 100%;
+    height: 570px;
+    z-index: -1;
+    box-shadow: inset 0px 10px 100px -100px rgba(124, 93, 162, 1), inset 0px -40px 40px -5px rgba(124, 93, 162, 1);
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    opacity: .4;
+    transform: translateY(50px);
+    animation: moveUp 1s ease-out forwards;
+}
+
+.sub-main {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    margin-left: 220px;
+    position: relative;
+    margin-top: -450px;
+    margin-bottom: 250px;
+    transform: translateY(50px);
+    animation: moveUp .3s ease-out 0.5s forwards;
+}
+
+.sub-main .contents {
+    height: 180px;
+}
+
+.sub-main .contents h2 {
+    color: #440961;
+    margin: 0px;
+    font-size: 17px;
+    text-align: left;
+}
+
+.sub-main .contents h1 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 64px;
+    margin: 0px;
+    color: white;
+    font-weight: 400;
+    text-align: left;
+}
+
+.sub-main .contents p {
+    color: #440961;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1.5;
+    text-align: left;
+    width: 750px;
+    white-space: normal;
+    word-wrap: break-word;
+}
+
+.b1 {
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.detail {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 17px;
+    border: 1px solid rgb(255, 255, 255);
+    height: 94px;
+    width: 1000px;
+    padding: 5px 20px;
+    background-color: transparent;
+    color: #ffffff;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 16px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    margin-top: -220px;
+    margin-left: 5px;
+    transform: translateY(30px);
+    animation: moveUp 1s ease-out 1s forwards;
+}
+
+span {
+    font-weight: bold;
+    color: #f3efef;
+}
+
+.view {
+    padding: 10px 20px 10px 20px;
+    margin-top: 40px;
+    margin-bottom: -50px;
+    height: 57px;
+    width: 300px;
+    position: relative;
+    font-size: 18px;
+    background-color: transparent;
+    font-weight: 700;
+    color: #fff;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border-radius: 14px;
+    transition: transform 0.3s;
+    z-index: 2;
+    margin-left: 520px;
+    border: 1px solid #fff;
+}
+
+.view:hover {
+    background-color: #440961;
+    color: #fff;
+}
+
+.enroll button{
+    padding: 10px 20px 10px 20px;
+    margin-top: 40px;
+    margin-bottom: -50px;
+    height: 57px;
+    width: 300px;
+    position: relative;
+    font-size: 18px;
+    background-color: #440961;
+    font-weight: 700;
+    color: #fff;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border-radius: 14px;
+    transition: transform 0.3s;
+    z-index: 2;
+    /* margin-left: 20px; */
+}
+
+
+
+.b1 .more-details-btns, .more-detail-btns {
+    padding: 10px 20px 10px 20px;
+    margin-top: 40px;
+    margin-bottom: -50px;
+    height: 57px;
+    width: 300px;
+    position: relative;
+    font-size: 18px;
+    background-color: #440961;
+    font-weight: 700;
+    color: #fff;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border-radius: 14px;
+    transition: transform 0.3s;
+    z-index: 2;
+    margin-left: 520px;
+}
+
+.b1 .more-details-btns, .more-detail-btns, .enroll button::before,
+.b1 .more-details-btns, .more-detail-btns, .enroll button::after {
+    content: "";
+    position: absolute;
+    width: 3px;
+    background-color: #fff;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 0;
+}
+
+.b1 .more-details-btns, .more-detail-btns, .enroll button:hover {
+    background-color: #440961;
+    color: #fff;
+    transform: translateY(-8px);
+}
+
+.b1 .more-details-btns, .enroll button:hover::before,
+.b1 .more-details-btns, .enroll button:hover::after {
+    transform: translateY(-50%) scaleY(1);
+    opacity: 1;
+}
+
+
+.enroll button::before {
+    left: 60px;
+    /* Adjust position */
+    top: 50%;
+    transform: translateY(-50%) scaleY(0);
+    /* Initially hidden */
+    height: 22px;
+    /* Larger bar height */
+  }
+  
+  /* Larger bar on the right side */
+  .enroll button::after {
+    right: 60px;
+    /* Adjust position */
+    top: 50%;
+    transform: translateY(-50%) scaleY(0);
+    /* Initially hidden */
+    height: 22px;
+    /* Larger bar height */
+  }
+  
+  /* Smaller bar on the left side */
+  .extra-bar-lefts {
+    position: absolute;
+    left: 53px;
+    /* Adjust position for smaller bar */
+    top: 50%;
+    transform: translateY(-50%) scaleY(0);
+    /* Initially hidden */
+    height: 13px;
+    /* Smaller bar height */
+    width: 3px;
+    background-color: #fff;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 0;
+    /* Initially hidden */
+  }
+  
+  /* Smaller bar on the right side */
+  .extra-bar-rights {
+    position: absolute;
+    right: 53px;
+    /* Adjust position for smaller bar */
+    top: 50%;
+    transform: translateY(-50%) scaleY(0);
+    /* Initially hidden */
+    height: 13px;
+    /* Smaller bar height */
+    width: 3px;
+    background-color: #fff;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 0;
+    /* Initially hidden */
+  }
+  
+  .enroll button:hover {
+    background-color: #440961;
+    color: #fff;
+    /* transform: translateY(-8px); */
+  }
+  
+  /* Make the bars appear on hover */
+  .enroll button:hover::before,
+  .enroll button:hover::after,
+  .enroll button:hover .extra-bar-lefts,
+  .enroll button:hover .extra-bar-rights {
+  
+    transform: translateY(-50%) scaleY(1);
+    /* Make the bars grow on hover */
+    opacity: 1;
+    /* Make the bars visible */
+  }
+
+
+
+
+
+.sentences {
+    background-color: rgba(124, 93, 162, 1);
+    height: 500px;
+}
+
+.section-hidden {
+    display: none;
+}
+
+.section-active {
+    display: block;
+}
+
+.active {
+    background-color: #f0f0f0;
+}
+
+.section-buttons button.active {
+    background-color: #ddd;
+    color: #000;
+}
+
+.additional-content {
+    background-color: rgba(124, 93, 162, 1);
+    padding-bottom: 10px;
+}
+
+#p1 {
+    color: #440961;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+#p2 {
+    font-weight: bold;
+    font-size: 64px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-top: -9px;
+    color: #fff;
+}
+
+.cons {
+    background-color: rgba(124, 93, 162, 1);
+    width: 85%;
+    padding: 20px;
+    padding-top: 60px;
+    margin-top: -10px;
+}
+
+.cons .image {
+    width: 100%;
+    height: 550px;
+    padding-top: 45px;
+}
+
+.cons .image img {
+    width: 90%;
+    height: 100%;
+    border-radius: 15px;
+    transform: translateY(50px);
+    animation: moveUp 1s ease-out 2s forwards;
+}
+
+.cons p {
+    width: 90%;
+    text-align: left;
+    font-weight: bold;
+    font-size: 18px;
+    color: #440961;
+}
+
+.cons h3 {
+    padding-top: 35px;
+    width: 90%;
+    font-size: 28px;
+    color: white;
+    text-align: left;
+}
+
+.cons ul {
+    width: 90%;
+}
+
+.cons ul li {
+    list-style: none;
+    width: 100%;
+    text-align: left;
+    line-height: 37px;
+    font-weight: 500;
+    color: #440961;
+    font-size: 18px;
+}
+
+.cons strong {
+    font-weight: bold;
+}
+
+.container-wrappers {
+    margin-top: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+    background-color: rgba(124, 93, 162, 1);
+    color: #fff;
+}
+
+.section-buttons:hover {
+    opacity: 1;
+    transform: translateY(-50px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.bot {
+    background-color: rgba(124, 93, 162, 1);
+    height: 400px;
+    margin-left: 90px;
+}
+
+/* Media Queries for responsiveness */
+
+/* Tablet devices */
+@media (max-width: 1024px) {
+    .sub-main {
+        margin-left: 50px;
+        margin-top: -300px;
+        margin-bottom: 100px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sub-main .contents h2{
+        margin-top: -210px;
+    }
+
+    .sub-main .contents h1 {
+        font-size: 48px;
+        margin-top: 6%;
+    }
+
+    .sub-main .contents p {
+        width: 100%;
+        font-size: 16px;
+    }
+
+    .view, .b1 .more-details-btns, .more-detail-btns, .enroll button {
+        width: 250px;
+        margin-left: 0;
+        margin-top: 20px;
+    }
+
+    .cons .image img {
+        width: 100%;
+    }
+
+    .container-wrappers {
+        padding: 10px;
+    }
+}
+
+/* Mobile devices */
+@media (max-width: 768px) {
+    .sub-main {
+        margin-left: 0;
+        margin-top: -150px;
+        margin-bottom: 50px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sub-main .contents h2{
+        margin-top: -220px;
+        /* margin-bottom: -10px; */
+    }
+
+    .sub-main .contents h1 {
+        font-size: 36px;
+        margin-top: 30px;
+    }
+
+    .sub-main .contents p {
+        width: 100%;
+        font-size: 15px;
+    }
+
+    .view, .b1 .more-details-btns, .more-detail-btns, .enroll button {
+        width: 200px;
+        margin-left: 0;
+        margin-top: 20px;
+    }
+
+    .enroll button,.view{
+        margin-left: 10px;
+        margin-top: 50px;
+        font-size: 15px;
+        width: 300px;
+    }
+
+    .detail {
+        justify-content: space-between;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+       
+        border-radius: 6px;
+        border: 1px solid rgb(255, 255, 255);
+        height: 400px;
+        width: 60%;
+        padding: 20px 10px 20px 10px;
+        background-color: rgba(0, 0, 0, .6);
+        opacity: 70%;
+        color: #ffffff;
+        margin-top: 40px;
+        gap: 5px;
+      }
+
+      .detail span{
+        margin: 0;
+        text-align: center;
+      }
+      
+
+    .bg-bck {
+        height: 400px;
+    }
+    .cons .who{
+        margin-top: -240px;
+    }
+    .cons .image img {
+        width: 100%;
+        height: 50%;
+    }
+
+    .container-wrappers {
+        padding: 10px;
+    }
+}
+

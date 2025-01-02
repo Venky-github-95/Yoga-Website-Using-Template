@@ -1,0 +1,1347 @@
+/* General Reset */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+  animation: MoveUp 1s ease-out forwards; 
+}
+
+/* About Section */
+
+.fitness{
+  background-color: rgba(124, 93, 162, 1);
+}
+
+.about-section {
+  position: relative;
+  text-align: center;
+  color: white;
+  height: 60vh;
+  background: url("https://w0.peakpx.com/wallpaper/251/917/HD-wallpaper-yoga-peaceful-seaside-pastels-1920x1080.jpg") no-repeat center center/cover;
+  display: right;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+.about-section::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, rgba(124, 93, 162, 0.664) 70%,rgb(124, 93, 162) 100%);
+}
+  
+
+.about-content {
+  position: relative;
+  z-index: 2;
+  max-width: 600px;
+ 
+}
+
+.about-content h1 {
+  font-size: 61px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-weight: 400;
+  margin-bottom: 1rem;
+  color: white;
+  margin-left: -110px; /* Push the text to the right */
+}
+
+.about-content p {
+  font-size: 18px;
+  line-height: 1.5;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin-bottom: 1.5rem;
+  color: #440961;
+  margin-left: 100px;
+  text-align: left; /* Align text to the right */
+  margin-left: +13px; /* Push the text to the right */
+}
+.about-content .p1 {
+  color: #440961;
+  font-size: 1.2rem;
+  margin-bottom: 4rem;
+  text-align: left;
+  margin-left: 15px;
+  position: relative;
+  top: 30px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+ .more-details-btn-1{
+  padding: 10px 20px 10px 20px;
+  margin-top: 20px;
+  margin-bottom: -50px;
+  margin-inline-start: 0px;
+  height: 57px;
+  width: 300px;
+  position: relative;
+  font-size: 18px;
+  background-color: #440961;
+  font-weight: 700;
+  color: rgb(255, 253, 253);
+  font-family: sans-serif;
+  border-radius: 14px;
+  transition: transform 0.3s;
+  z-index: 2;
+}
+
+.bck .more-details-btn-1:hover{
+  transform: translateY(-5px);
+}
+
+.more-details-btn-1::before,
+.more-details-btn-1::after {
+  content: "";
+  position: absolute;
+  width: 3px; /* Small width for the bars */
+  background-color: white;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  opacity: 0; /* Initially hidden */
+}
+
+/* Larger bar on the left side */
+.more-details-btn-1::before {
+  left: 60px; /* Adjust position */
+  top: 50%;
+  transform: translateY(-50%) scaleY(0); /* Initially hidden */
+  height: 22px; /* Larger bar height */
+  width: 4px;
+}
+
+/* Larger bar on the right side */
+.more-details-btn-1::after {
+  right: 60px; /* Adjust position */
+  top: 50%;
+  transform: translateY(-50%) scaleY(0); /* Initially hidden */
+  height: 22px; /* Larger bar height */
+  width: 4px;
+}
+
+/* Smaller bar on the left side */
+.extra-bar-left-1 {
+  position: absolute;
+  left: 53px; /* Adjust position for smaller bar */
+  top: 50%;
+  transform: translateY(-50%) scaleY(0); /* Initially hidden */
+  height: 13px; /* Smaller bar height */
+  width: 3px;
+  background-color: white;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  opacity: 0; /* Initially hidden */
+}
+
+/* Smaller bar on the right side */
+.extra-bar-right-1 {
+  position: absolute;
+  right: 52px; /* Adjust position for smaller bar */
+  top: 50%;
+  transform: translateY(-50%) scaleY(0); /* Initially hidden */
+  height: 13px; /* Smaller bar height */
+  width: 3.5px;
+  background-color:white;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  opacity: 0; /* Initially hidden */
+}
+
+.more-details-btn-1:hover {
+  background-color: #440961;
+  color: white;
+  /* transform: translateY(-8px); */
+}
+
+/* Make the bars appear on hover */
+.more-details-btn-1:hover::before,
+.more-details-btn-1:hover::after,
+.more-details-btn-1:hover .extra-bar-left-1,
+.more-details-btn-1:hover .extra-bar-right-1 {
+
+  transform: translateY(-50%) scaleY(1); /* Make the bars grow on hover */
+  opacity: 1; /* Make the bars visible */
+}
+
+/* Responsive Design for Mobile Screens */
+@media only screen and (max-width: 768px) {
+  .about-section {
+    height: auto; /* Allow section to adjust height dynamically */
+    padding: 1.5rem;
+    text-align: center;
+  }
+
+  .about-content h1 {
+    font-size: 36px; /* Smaller font for headings */
+    margin-left: 0; /* Remove extra margins */
+  }
+
+  .about-content p {
+    font-size: 14px; /* Reduce paragraph font size */
+    text-align: center; /* Center align text on mobile */
+    margin-left: 0;
+  }
+
+  .about-content p1 {
+    font-size: 1rem; /* Adjust font size */
+    text-align: center;
+    margin-left: 0;
+  }
+
+  .more-details-btn-1 {
+    width: 100%; /* Make the button full-width */
+    max-width: 300px; /* Set a maximum width */
+    margin: 0 auto; /* Center the button */
+    font-size: 14px; /* Reduce font size for mobile */
+  }
+}
+
+/* Extra Small Devices (max-width: 480px) */
+@media only screen and (max-width: 480px) {
+  .about-content h1 {
+    font-size: 28px; /* Further reduce heading font size */
+  }
+
+  .about-content p {
+    font-size: 12px; /* Reduce paragraph font size */
+  }
+
+  .more-details-btn-1 {
+    font-size: 12px; /* Smaller button font size */
+    height: 45px;
+  }
+}
+
+/*button 1 Responsive Design */
+@media screen and (max-width: 480px) {
+  .more-details-btn-1 {
+    height: 45px;
+    width: 200px;
+    font-size: 14px;
+    padding: 8px 10px;
+    border-radius: 10px;
+  }
+
+  .more-details-btn-1::before {
+    left: 30px;
+    height: 15px;
+  }
+
+  .more-details-btn-1::after {
+    right: 30px;
+    height: 15px;
+  }
+
+  .extra-bar-left-1 {
+    left: 25px;
+    height: 10px;
+  }
+
+  .extra-bar-right-1 {
+    right: 25px;
+    height: 10px;
+  }
+}
+
+
+
+ /* Mission Section */
+ .mission-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3rem 6rem;
+  background-color: rgba(124, 93, 162, 1);
+  color: white;
+  height: 100vh;
+  margin-top: 50px;
+}
+
+.mission-content {
+  flex: 1;
+  max-width: 50%;
+}
+
+.mission-title {
+  color: #440961;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  text-align: left; /* Align text to the right */
+  margin-left: -60px; /* Push the text to the right */
+  position: relative; 
+  top: 30px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+.mission-heading {
+  font-size: 64px;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  text-align: left; /* Align text to the right */
+  margin-left: -60px; /* Push the text to the right */
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-weight: 400;
+  
+}
+
+.mission-text {
+  font-size: 18px;
+  line-height: 1.3;
+  margin-bottom: 1.5rem;
+  color:#440961;
+   white-space: pre-wrap;
+  word-spacing: 0px;
+  text-align: left; /* Align text to the right */
+  margin-left: -60px; /* Push the text to the right */
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  
+  
+}
+
+.mission-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mission-image img {
+  width: 700px;
+  height: 500px;
+  border-radius: 8px;
+
+}
+
+/* Responsive Design for Mobile Screens */
+@media only screen and (max-width: 768px) {
+  .mission-section {
+    flex-direction: column; /* Stack content vertically */
+    padding: 2rem; /* Reduce padding for smaller screens */
+    height: auto; /* Adjust height dynamically */
+    text-align: center; /* Center content for mobile */
+  }
+
+  .mission-content {
+    max-width: 100%; /* Allow content to take full width */
+    margin-bottom: 2rem; /* Add spacing between content and image */
+  }
+
+  .mission-title {
+    font-size: 1rem; /* Reduce font size */
+    margin-left: 0; /* Remove left margin for mobile */
+    text-align: center;
+  }
+
+  .mission-heading {
+    font-size: 36px; /* Reduce font size */
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .mission-text {
+    font-size: 14px; /* Reduce font size */
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .mission-image img {
+    width: 100%; /* Make image responsive */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 400px; /* Limit image size on smaller devices */
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .mission-title {
+    font-size: 0.9rem; /* Further reduce font size */
+  }
+
+  .mission-heading {
+    font-size: 28px; /* Further reduce font size */
+  }
+
+  .mission-text {
+    font-size: 12px; /* Further reduce text size */
+  }
+
+  .mission-image img {
+    max-width: 300px; /* Further limit image size */
+  }
+}
+
+/* Approach Section Styling */
+.approach-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3rem 6rem;
+ background-color: rgba(124, 93, 162, 1);
+  color: white;
+  height: 100vh;
+
+}
+
+.image-container img {
+  width: 600px;
+  height: 600px;
+  border-radius: 10px; /* Optional rounded corners */
+}
+
+.content-container {
+  flex: 1;
+  max-width: 50%;
+}
+
+.highlight-text {
+  color: #440961;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  text-align: left; /* Align text to the right */
+  margin-left: +70px; /* Push the text to the right */
+  position: relative; top: 30px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.main-heading {
+  font-size: 64px;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  text-align: left; /* Align text to the right */
+  margin-left: +70px; /* Push the text to the right */
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-weight: 400;
+  
+}
+
+.description {
+  font-size: 18px;
+  line-height: 1.3;
+  margin-bottom: 1.5rem;
+  color: #440961;
+  text-align: left; /* Align text to the right */
+  margin-left: +70px; /* Push the text to the right */
+  white-space: pre-wrap;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+ 
+  
+}
+
+
+/* Responsive Design for Mobile Screens */
+@media only screen and (max-width: 768px) {
+  .approach-section {
+    flex-direction: column; /* Stack content vertically */
+    text-align: center; /* Center-align content for mobile */
+    padding: 2rem; /* Reduce padding */
+    height: auto; /* Adjust height dynamically */
+  }
+
+  .content-container {
+    max-width: 100%; /* Allow content to take full width */
+    margin-bottom: 2rem; /* Add spacing between content and image */
+    order: 1; /* Display content first */
+  }
+
+  .image-container {
+    order: 2; /* Display image second */
+    text-align: center; /* Center the image */
+    margin-top: 1rem;
+  }
+
+  .highlight-text {
+    font-size: 1rem; /* Reduce font size */
+    margin-left: 0; /* Remove left margin for mobile */
+    text-align: center;
+  }
+
+  .main-heading {
+    font-size: 36px; /* Reduce font size */
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .description {
+    font-size: 14px; /* Reduce font size */
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .image-container img {
+    width: 100%; /* Make image responsive */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 400px; /* Limit image size on smaller devices */
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .highlight-text {
+    font-size: 0.9rem; /* Further reduce font size */
+  }
+
+  .main-heading {
+    font-size: 28px; /* Further reduce font size */
+  }
+
+  .description {
+    font-size: 12px; /* Further reduce text size */
+  }
+
+  .image-container img {
+    max-width: 300px; /* Further limit image size */
+  }
+}
+
+
+
+
+
+/* values section style */
+
+.values-section {
+  position: relative; /* Add this to make the pseudo-element work */
+  padding: 40px;
+  background: url("https://images.stockcake.com/public/6/c/3/6c3d1f29-9a06-44dd-b98b-504d842566c2_large/yoga-inside-skyscraper-stockcake.jpg") no-repeat center center/cover;
+  color: white;
+  text-align: center;
+  height: 800px;
+  margin-top: 100px;
+}
+
+.values-section::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, rgb(124, 93, 162) 5%, rgba(124, 93, 162, 0.692) 70%, rgb(124, 93, 162) 100%);
+  z-index: 1; /* Ensures the overlay is on top */
+  pointer-events: none; /* Optional: Prevents interaction blocking */
+}
+
+.values-section * {
+  position: relative; /* Keeps content above the pseudo-element */
+  z-index: 2;
+}
+
+
+
+.values-header h1 {
+  font-size: 60px;
+  margin-bottom: 10px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-weight: 400;
+}
+.values-header p1 {
+  font-size: 16px;
+  color: #440961;
+  position: relative; top: 5px; 
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  
+}
+.values-header p {
+  font-size: 18px;
+  color:   #440961;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.values-cards {
+  display: flex;
+  flex-direction: row;
+  gap: 0px; /* Adjust the spacing between cards */
+  justify-content: center; /* Center the cards */
+  border: 2px solid rgba(248, 244, 244, 0.685);
+  border-radius: 5px;
+  padding: 5px;
+  width: 990px;
+  margin:auto; /* Push the text to the right */
+  margin-bottom:20px;
+  
+ 
+}
+.values-cards2 {
+  display: flex;
+  flex-direction: row;
+  gap: 0px; /* Adjust the spacing between cards */
+  justify-content: center; /* Center the cards */
+  border: 2px solid rgba(248, 244, 244, 0.685);
+  border-radius: 10px;
+  padding: 5px;
+  width:990px;
+  margin:auto; /* Push the text to the right */
+ 
+}
+
+.card {
+  background: #dbd2d200;
+  padding: px;
+  border-radius: 0px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0);
+  text-align: center;
+  width:320px;
+  height: 170px;
+}
+
+.icons {
+  font-size: 2rem;
+  color: #ffd700;
+  margin-bottom: 10px;
+}
+
+.card h3 {
+  font-size: 16px;
+  color: #ffd700;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 18px;
+  color:   #440961;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+/* Responsive adjustments for mobile screens */
+@media (max-width: 768px) {
+  .values-header h1 {
+    font-size: 32px;
+  }
+
+  .values-header p1 {
+    font-size: 12px;
+  }
+
+  .values-header p {
+    font-size: 14px;
+  }
+
+  .card {
+    max-width: 280px;
+  }
+
+  .icon {
+    font-size: 1.2rem;
+  }
+
+  .card h3 {
+    font-size: 12px;
+  }
+
+  .card p {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .values-header h1 {
+    font-size: 28px;
+  }
+
+  .values-section {
+    margin-top: -10%;
+    margin-bottom: 100%;
+    padding: 15px;
+  }
+
+  .card {
+    max-width: 100%;
+  }
+}
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .values-cards{
+    flex-direction: column; /* Stack the cards vertically */
+    width: 50%; /* Adjust width for smaller screens */
+    padding: 10px; /* Add more padding for spacing */
+  
+  }
+  .values-cards2 {
+    flex-direction: column; /* Stack the cards vertically */
+    width:50%; /* Adjust width for smaller screens */
+    padding: 10px; /* Add more padding for spacing */
+    margin-bottom: 200%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .values-cards{
+    flex-direction: column; /* Stack the cards vertically */
+    width: 80%; /* Full-width for very small screens */
+    padding: 8px;
+    gap: 10px; /* Add space between stacked cards */
+    border-radius: 8px;
+  }
+  .values-cards2 {
+    flex-direction: column; /* Stack the cards vertically */
+    width: 80%; /* Full-width for very small screens */
+    padding: 8px;
+    gap: 10px; /* Add space between stacked cards */
+    border-radius: 8px;
+    margin-bottom: 30px;
+  }
+}
+
+
+
+
+/* testimonils */
+/* Keyframes for seamless continuous scrolling1 */
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0); /* Start from the initial position */
+  }
+  100% {
+    transform: translateX(-50%); /* Move the entire content to the left */
+  }
+}
+
+.testimonials-cards {
+  overflow: hidden; /* Hide overflowing content */
+  position: relative; /* Ensure content is contained */
+  width: 990px; /* Matches your container width */
+  height: 150px; /* Matches your card height */
+}
+
+.testimonials-cards .scroll-content {
+  display: flex;
+  animation: scroll-left 30s linear infinite; /* Continuous scrolling animation */
+  width: calc(320px * 6); /* Total width based on card count */
+}
+
+.testimonials-cards .scroll-content > * {
+  flex-shrink: 0; /* Prevent cards from shrinking */
+  width: 420px; /* Width of each card */
+  height: 200px; /* Height of each card */
+  padding: 10px;
+  box-sizing: border-box;
+}
+.testimonials-cards .scroll-content > *:last-child {
+  margin-left: -120px; /* Overlap the last card to ensure no gaps */
+}
+
+.testimonials-header p1 {
+  display: block; /* Ensure it behaves like a block element */
+  font-size: 20px; /* Default font size */
+  color: #440961; /* Maintain styling */
+  margin-bottom: 30px; /* Add spacing below */
+  font-family: 'Arial', sans-serif; /* Set font family */
+}
+.tcard {
+  background: #dbd2d200;
+  padding: px;
+  border-radius: 0px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0);
+  text-align: center;
+  width:620px;
+  height: 170px;
+}
+
+.testimonials-cards {
+  display: flex;
+  flex-direction: row;
+  gap: 0px; /* Adjust the spacing between cards */
+  justify-content: center; /* Center the cards */
+  border: 2px solid rgba(247, 242, 242, 0.507);
+  border-radius: 10px;
+  padding: 5px;
+  width: 1100px;
+  margin :auto; /* Push the text to the right */
+  margin-bottom:30px; 
+  height: 210px;
+}
+.tcard h3 {
+  font-size: 16px;
+  color: #f3f3f3;
+  margin-bottom: 10px;
+  text-align: left;
+  
+}
+
+.tcard p {
+  font-size: 18px;
+  color:   #440961;
+  text-align: left;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.testimonials-section {
+  position: relative; /* Add this to make the pseudo-element work */
+  padding: 40px;
+  background: url("https://png.pngtree.com/thumb_back/fw800/background/20240819/pngtree-woman-practicing-yoga-in-the-mountains-at-sunset-image_16170469.jpg") no-repeat center center/cover;
+  color: white;
+  text-align: center;
+}
+
+.testimonials-section::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, rgb(124, 93, 162) 5%, rgba(124, 93, 162, 0.692) 70%, rgb(124, 93, 162) 100%);
+  z-index: 1; /* Ensures the overlay is on top */
+  pointer-events: none; /* Prevents interaction blocking */
+}
+
+.testimonials-section * {
+  position: relative; /* Ensures all content appears above the overlay */
+  z-index: 2;
+}
+
+.testimonials-header h1 {
+  font-size: 60px;
+  margin-bottom: 50px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.testimonials-header p {
+  font-size: 16px;
+  color:  rgba(255, 255, 255, 0.432);
+  
+}
+.testimonials-header p1 {
+  font-size: 16px;
+  color:   #440961;
+  position: relative; top: 30px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+/* Keyframes for seamless continuous scrolling2 */
+@keyframes scroll-right {
+  0% {
+    transform: translateX(-50%); /* Start from the middle of the list */
+  }
+  100% {
+    transform: translateX(0); /* Scroll to the initial position */
+  }
+}
+
+.te {
+  overflow: hidden; /* Hide overflowing content */
+  position: relative; /* Contain the scrolling content */
+  width: 1100px; /* Adjust the container width */
+  height: 210px; /* Match the height of the cards */
+  border: 2px solid rgba(247, 242, 242, 0.507);
+  border-radius: 10px;
+  padding: 5px;
+  margin:auto; /* Align to the right */
+  margin-bottom: 30px;
+}
+
+.te .sc {
+  display: flex;
+  animation: scroll-right 30s linear infinite; /* Continuous right-scrolling animation */
+  width: calc(420px * 6); /* Total width based on card count */
+}
+
+.te .sc > * {
+  flex-shrink: 0; /* Prevent cards from shrinking */
+  width: 420px; /* Width of each card */
+  height: 200px; /* Height of each card */
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+/* Add this to ensure seamless loop */
+.te .sc > *:last-child {
+  margin-right: -420px; /* Overlap the last card to ensure no gaps */
+}
+
+/*button 2 section*/
+.more-details-btn-2 {
+  padding: 10px 15px;
+  margin-top: 15px;
+  margin-bottom: -40px;
+  margin-inline-start: 0px;
+  height: 50px;
+  width: 250px;
+  position: relative;
+  font-size: 16px;
+  background-color: #440961;
+  font-weight: 700;
+  color: rgb(255, 253, 253);
+  font-family: sans-serif;
+  border-radius: 12px;
+  transition: transform 0.3s;
+  z-index: 2;
+}
+
+.more-details-btn-2:hover {
+  transform: translateY(-5px);
+}
+
+.more-details-btn-2::before,
+.more-details-btn-2::after {
+  content: "";
+  position: absolute;
+  width: 2px; /* Reduced width for mobile */
+  background-color: white;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  opacity: 0; /* Initially hidden */
+}
+
+.more-details-btn-2::before {
+  left: 60px; /* Adjusted for mobile */
+  top: 50%;
+  transform: translateY(-50%) scaleY(0);
+  height: 20px; /* Slightly smaller for mobile */
+}
+
+.more-details-btn-2::after {
+  right: 60px; /* Adjusted for mobile */
+  top: 50%;
+  transform: translateY(-50%) scaleY(0);
+  height: 20px; /* Slightly smaller for mobile */
+}
+
+.extra-bar2-left {
+  position: absolute;
+  left: 55px; /* Adjusted for mobile */
+  top: 50%;
+  transform: translateY(-50%) scaleY(0);
+  height: 12px; /* Smaller for mobile */
+  width: 2px;
+  background-color: white;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  opacity: 0;
+}
+
+.extra-bar2-right {
+  position: absolute;
+  right: 55px; /* Adjusted for mobile */
+  top: 50%;
+  transform: translateY(-50%) scaleY(0);
+  height: 12px; /* Smaller for mobile */
+  width: 2px;
+  background-color: white;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  opacity: 0;
+}
+
+.more-details-btn-2:hover {
+  background-color: #440961;
+  color: white;
+}
+
+/* Make the bars appear on hover */
+.more-details-btn-2:hover::before,
+.more-details-btn-2:hover::after,
+.more-details-btn-2:hover .extra-bar2-left,
+.more-details-btn-2:hover .extra-bar2-right {
+  transform: translateY(-50%) scaleY(1);
+  opacity: 1;
+}
+
+/*button 2 Responsive Design */
+@media screen and (max-width: 480px) {
+  .more-details-btn-2 {
+    height: 45px;
+    width: 200px;
+    font-size: 14px;
+    padding: 8px 10px;
+    border-radius: 10px;
+  }
+
+  .more-details-btn-2::before {
+    left: 30px;
+    height: 15px;
+  }
+
+  .more-details-btn-2::after {
+    right: 30px;
+    height: 15px;
+  }
+
+  .extra-bar2-left {
+    left: 25px;
+    height: 10px;
+  }
+
+  .extra-bar2-right {
+    right: 25px;
+    height: 10px;
+  }
+}
+
+/* Button 2 Responsive Design for 768px */
+@media screen and (max-width: 768px) {
+  .more-details-btn-2 {
+    height: 50px;
+    width: 220px;
+    font-size: 16px;
+    padding: 10px 12px;
+    border-radius: 12px;
+  }
+
+  .more-details-btn-2::before {
+    left: 35px;
+    height: 18px;
+  }
+
+  .more-details-btn-2::after {
+    right: 35px;
+    height: 18px;
+  }
+
+  .extra-bar2-left {
+    left: 30px;
+    height: 12px;
+  }
+
+  .extra-bar2-right {
+    right: 30px;
+    height: 12px;
+  }
+}
+
+
+
+/* Keyframes for down-to-up animation */
+@keyframes move-up {
+  0% {
+    transform: translateY(20px); /* Start below */
+    opacity: 0; /* Start invisible */
+  }
+  100% {
+    transform: translateY(0); /* End at original position */
+    opacity: 1; /* End fully visible */
+  }
+}
+
+/* Apply the animation to various sections */
+.about-content,
+.mission-content,
+.approach-section,
+.values-header,
+.testimonials-header {
+  animation: move-up 1s ease forwards; /* Adjust duration as needed */
+}
+
+
+
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .testimonials-header h1 {
+    font-size: 40px; /* Smaller font size for tablets */
+  }
+
+  .testimonials-cards .scroll-content > * {
+    width: 300px; /* Adjust card width */
+  }
+
+  .tcard h3 {
+    font-size: 16px; /* Adjust title font size */
+  }
+
+  .tcard p {
+    font-size: 14px; /* Adjust paragraph font size */
+  }
+}
+
+@media (max-width: 768px) {
+  .testimonials-header h1 {
+    font-size: 32px;/* Smaller header size for mobile */
+  }
+  .testimonials-header p1 {
+    font-size: 14px; 
+    margin-top:60%;/* Further reduce font size for small screens */
+  }
+
+  .testimonials-cards .scroll-content > * {
+    width: 250px; /* Adjust card width */
+  }
+
+  .tcard h3 {
+    font-size: 14px;
+  }
+
+  .tcard p {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .testimonials-header h1 {
+    font-size: 24px; /* Mobile-optimized header */
+  }
+  .testimonials-header p1 {
+    font-size: 14px; /* Further reduce font size for small screens */
+  }
+  .testimonials-cards {
+    height: auto; /* Dynamic height for small screens */
+  }
+
+  .testimonials-cards .scroll-content > * {
+    width: 200px; /* Narrower cards for small screens */
+    margin: 0 5px; /* Adjust spacing */
+  }
+
+  .tcard h3 {
+    font-size: 12px;
+  }
+
+  .tcard p {
+    font-size: 10px;
+  }
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .testimonials-header h1 {
+    font-size: 48px; /* Smaller font for tablets */
+  }
+
+  .testimonials-header p {
+    font-size: 14px;
+  }
+
+  .testimonials-cards .scroll-content > * {
+    width: 350px; /* Smaller cards for tablets */
+    height: 180px;
+  }
+
+  .tcard {
+    max-width: 350px;
+  }
+}
+
+@media (max-width: 768px) {
+  .testimonials-header h1 {
+    font-size: 36px; /* Smaller font for smaller screens */
+    margin-bottom: 20px;
+    margin-top: -30%;
+  }
+  .testimonials-header p1{
+    margin-bottom: 38%;
+  }
+
+  .testimonials-cards {
+    height: auto; /* Allow flexible height */
+  }
+
+  .testimonials-cards .scroll-content > * {
+    width: 300px; /* Smaller cards for mobile */
+    height: 150px;
+  }
+
+  .tcard {
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .testimonials-header h1 {
+    font-size: 28px; /* Adjusted for smaller screens */
+    margin-bottom: 40px;
+    margin-top: 500px;
+  }
+  .testimonials-header p1{
+    margin-bottom: 50%;
+  }
+  .testimonials-cards {
+    width: 100%; /* Full width */
+    margin: 0 auto; /* Center-align */
+    padding: 5px;
+  }
+
+  .testimonials-cards .scroll-content > * {
+    width: 250px; /* Smallest cards */
+    height: 120px;
+  }
+
+  .tcard {
+    max-width: 250px;
+    padding: 10px;
+  }
+
+  .tcard h3 {
+    font-size: 14px;
+  }
+
+  .tcard p {
+    font-size: 14px;
+  }
+}
+
+/* Button Responsiveness */
+.more-details-btn-2 {
+  padding: 10px 20px;
+  margin: 20px auto;
+  height: 50px;
+  width: 100%;
+  max-width: 300px;
+  font-size: 16px;
+  background-color: #440961;
+  font-weight: 700;
+  color: rgb(255, 253, 253);
+  font-family: sans-serif;
+  border-radius: 14px;
+  transition: transform 0.3s;
+  display: block;
+}
+
+.more-details-btn-2:hover {
+  transform: translateY(-5px);
+}
+
+/* Adjust button for smaller screens */
+@media (max-width: 768px) {
+  .more-details-btn-2 {
+    font-size: 14px;
+    padding: 10px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .more-details-btn-2 {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .testimonials-cards {
+    height: 190px;
+    padding: 1rem; /* Adjusted padding */
+  }
+  
+  .tcard {
+    height: 160px;
+    padding: 0.75rem; /* Adjusted padding */
+  }
+
+  .testimonials-header h1 {
+    font-size: 3rem; /* Adjusted font size */
+  }
+}
+
+@media (max-width: 768px) {
+  .testimonials-cards {
+    height: 180px;
+    padding: 0.75rem; /* Adjusted padding */
+  }
+
+  .tcard {
+    height: 150px;
+    padding: 0.5rem; /* Adjusted padding */
+  }
+
+  .testimonials-header h1 {
+    font-size: 2.25rem; /* Adjusted font size */
+  }
+  
+  .testimonials-header p {
+    font-size: 0.875rem; /* Adjusted font size */
+  }
+}
+
+@media (max-width: 480px) {
+  .testimonials-cards {
+    height: 160px;
+    padding: 0.5rem; /* Adjusted padding */
+  }
+
+  .tcard {
+    width: 100%; /* Cards stack on smaller screens */
+    height: 140px;
+    padding: 0.5rem; /* Adjusted padding */
+  }
+
+  .testimonials-header h1 {
+    font-size: 1.75re; /* Adjusted font size */
+    margin-top: -40%;
+  }
+
+  .testimonials-header p {
+    font-size: 0.75rem; /* Adjusted font size */
+  }
+}
+
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .te {
+    height: 190px;
+    padding: 0.75rem; /* Adjusted padding */
+  }
+
+  .te .sc > * {
+    width: 360px; /* Adjust card width */
+    height: 180px; /* Adjust card height */
+  }
+
+  .more-details-btn-2 {
+    width: 15rem;
+    height: 3rem;
+    font-size: 0.875rem; /* Adjust font size */
+  }
+}
+
+@media (max-width: 768px) {
+  .te {
+    height: 180px;
+    padding: 0.5rem; /* Adjusted padding */
+  }
+
+  .te .sc > * {
+    width: 300px; /* Adjust card width */
+    height: 160px; /* Adjust card height */
+  }
+
+  .more-details-btn-2 {
+    width: 12.5rem;
+    height: 2.75rem;
+    font-size: 0.75rem; /* Adjust font size */
+  }
+}
+
+@media (max-width: 480px) {
+  .te {
+    height: 160px;
+    padding: 0.5rem; /* Adjusted padding */
+  }
+
+  .te .sc > * {
+    width: 100%; /* Cards stack on smaller screens */
+    height: 140px;
+  }
+
+  .more-details-btn-2 {
+    width: 10rem;
+    height: 2.5rem;
+    font-size: 0.625rem; /* Adjust font size */
+  }
+}
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .testimonials-cards,.te {
+    flex-wrap: wrap; /* Allow cards to wrap on smaller screens */
+    gap: 0.75rem; /* Reduce spacing between cards */
+    padding: 0.75rem;
+    margin-bottom: 10px;
+   max-width: 900px; /* Adjust maximum width */
+  }
+}
+
+@media (max-width: 768px) {
+  .testimonials-cards,.te {
+    flex-direction: column; /* Stack cards vertically */
+    align-items: center; /* Center align cards */
+    padding: 0.5rem;
+    gap: 0.5rem; /* Reduce spacing further */
+    max-width: 80%; /* Full width for mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .testimonials-cards,.te {
+    padding: 0.25rem; /* Minimal padding for smaller screens */
+    gap: 0.25rem; /* Minimal gap */
+    max-width: 90%; /* Full width for mobile */
+    border-radius: 0.5rem; /* Adjust border radius */
+  }
+}

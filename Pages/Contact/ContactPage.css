@@ -1,0 +1,572 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+   @keyframes slideUp {
+     from {
+       transform: translateY(100%);
+       opacity: 0;
+     }
+     to {
+       transform: translateY(0);
+       opacity: 1;
+     }
+   }
+   .head-container {
+    position: relative;
+    text-align: left;
+    padding: 50px 20px;
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: overlay;
+    /* filter: brightness(60%);  */
+    height: 100vh;
+    /* background-color: transparent; */
+    opacity: 1; /* Ensure full opacity */
+    box-shadow: inset 0px 35px 5px -100px rgba(124, 93, 162, 1), inset 63px -108px 70px -89px rgba(124, 93, 162, 1);
+  }
+
+  @media (max-width: 768px) {
+    .head-container {
+      padding-top: 100px;
+    
+    }
+  
+  }
+  
+  .background-overlay {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 750px; /* Adjust the gradient height */
+    background: linear-gradient(to bottom, rgba(124, 93, 162, 0) 0%, rgba(124, 93, 162, 1) 90%);
+    box-shadow: inset 0px 100px -70px -89px rgba(124, 93, 162, 1);
+    /* background-color: transparent; */
+    z-index: 1;
+  }
+  
+  .slide-text {
+    position: relative;
+    color: #440961;
+    margin-bottom: 20px;
+    font-weight: 400;
+    font-family: 'Impact', Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    z-index: 90;
+    margin-left: 70px;
+    left: 10px;
+    bottom: -40px;
+    font-size: 16px;
+    animation: slideUp 1.5s ease-out;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  .slide-text-2 {
+    font-size: 64px;
+    font-weight: 400;
+    color: #FFFFFF;
+    margin: 80px 0 0;
+    margin-left: 80px;
+    font-family: 'Impact', Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    z-index: 2;
+    animation: slideUp 2s ease-out;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  .slide-text-3 {
+    max-width: 600px;
+    margin: 20px 0;
+    line-height: 1.6;
+    color: #440961;
+    margin-left: 80px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    z-index: 2;
+    animation: slideUp 2.5s ease-out;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Responsive Design for Mobile Screens */
+  @media (max-width: 768px) {
+
+    .contact-section-container .head2{
+      margin-left: 10px;
+    }
+
+    .contact-section-container .contact-section-tata {
+      font-size: 20px;
+      line-height: 30px;
+      margin-left: 10px;
+      margin-top: 70px;
+      background-size: cover;
+      background-position: center;
+  }
+    
+    .slide-text {
+      font-size: 1.2rem;
+      margin-left: 10px;
+      left: 0;
+      bottom: 0;
+    }
+    
+    .slide-text-2 {
+      font-size: 2rem; /* Adjusted font size for mobile */
+      margin-left: 10px;
+      margin-top: 10px;
+    }
+    
+    .slide-text-3 {
+      margin-left: 10px;
+      max-width: 100%; /* Ensure full width for mobile */
+      font-size: 1rem; /* Adjust font size for readability */
+    }
+  }
+  
+  /* Animation for Text */
+  @keyframes slideUp {
+    from {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  
+    .contact-section-container {
+      padding: 50px 20px;
+      animation: slideUp 2s ease-out;
+      /* box-shadow: -10px 10px 15px rgba(7, 0, 0, 0.3); */
+      position: relative;
+      background-repeat: no-repeat;
+      background: rgba(124,93,162,1);
+      background-size: cover;
+      background-position: center;
+
+      /* filter: brightness(75%); */
+      height: 100vh;
+      margin-bottom: -80px;
+      font-size: large;
+      
+    }
+    .contact-section-tata{
+      font-size: 20px;
+      line-height: 30px;
+      margin-left: 70px;
+      margin-top: 70px;
+      background-size: cover;
+    background-position: center;
+    }
+    .contact-section h2 {
+      font-size: 3rem;
+      font-weight: bold;
+      margin-left: 70px;
+      animation: slideUp 2s ease-out;
+      font-family: 'Impact', Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+      color: rgb(255, 255, 255);
+      bottom: 10px;
+    }
+    .contact-section p {
+      margin-top: 50px;
+      margin-bottom: 90px;
+      margin-left: 70px;
+      animation: slideUp 2.5s ease-out;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      font-size: 90px;
+      line-height: 1.1;
+    }
+
+    .contact-section-content {
+      display: flex;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+      margin-bottom: 100px;
+    }
+    
+    .contact-info {
+      flex: 1 1 0%;
+      margin-top: 110px; /* Reduced margin-top for better alignment */
+      margin-bottom: 90; /* Removed negative margin */
+      margin-left: 50px; /* Adjusted left margin for better positioning */
+      animation: slideUp 3s ease-out;
+      color: #440961;
+      width: 40%;
+    }
+    
+    .contact-info p {
+      margin: 5px 900; /* Reduced spacing between paragraphs */
+    }
+    
+    .contact-info hr {
+      border: none;
+      border-top: 1px solid #ccc; /* Lighter and thinner line */
+      width: 70%; /* Adjusted width for consistent alignment */
+      margin: 10px 0; /* Reduced spacing between sections */
+    }
+    
+    .socials ul {
+      list-style-type: none;
+      display: flex;
+      flex-direction: row;
+      padding: 0;
+      margin: 0; /* Removed default list margin */
+      justify-content: space-between;
+      width: 60%;
+    }
+    
+    .socials li {
+      margin-bottom: 5px; /* Reduced spacing between social items */
+      display: flex;
+      align-items: center;
+      gap: 20px; /* Maintained icon-text spacing */
+      
+      margin-left: 0;
+    }
+    
+    .socials li span {
+      color: #440961;
+      font-size: 14px; /* Adjusted font size for better visual balance */
+      margin-left: -10px;
+    }
+    
+    
+    .contact-form {
+      flex: 1 1 45%;
+      width: 60%;
+      animation: slideUp 3.5s ease-out;
+    }
+    .contact-form input,
+    .name-field {
+      width: 48%; /* Adjust width as needed */
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    /* Email input field */
+.email-field {
+  width: 8%; /* Adjust width as needed */
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.message-field {
+  width: -10%; /* Make the message field take full width */
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  min-height: 120px; /* Adjust as needed */
+}
+
+/* Optional: style for the submit button */
+button {
+  padding: 10px 20px;
+  background-color: #440961;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #35074c; }
+    @media (max-width: 768px) {
+      .contact-section-container {
+        padding: 20px;
+        height: auto;
+      }
+      .contact-section h2 {
+        font-size: 2rem;
+        margin-left: 20px;
+      }
+      .contact-section p {
+        margin-left: 20px;
+        font-size: 16px;
+      }
+      .contact-info,
+      /* Basic Styles */
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Default Layout for Larger Screens */
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.contact-form button {
+  padding: 10px 260px;
+  font-size: 16px;
+  background-color: #4B0082;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.contact-form .name-field,
+.contact-form .email-field {
+  width: 0%; /* Full width by default */
+}
+
+.contact-form .message-field {
+  width: 0%; /* Full width for message textarea */
+}
+
+
+    }
+
+    /* Media Query for Mobile View */
+@media (max-width: 768px) {
+  .contact-form {
+    max-width: 10%; /* Full width on small screens */
+    padding: 10px;
+  }
+
+  /* Stack form fields vertically on smaller screens */
+  .contact-form form {
+    flex-direction: column;
+  }
+
+  .contact-form .name-field,
+  .contact-form .email-field {
+    width: 100%; /* Full width on small screens */
+    margin-bottom: 15px; /* Space between fields */
+  }
+
+  .contact-form button {
+    padding: 10px 90px; /* Reduced padding on mobile for a better fit */
+  }
+
+  .contact-form .message-field {
+    width: 100%; /* Full width on small screens */
+    margin-bottom: 15px;
+  }
+
+  .contact-form input[type="checkbox"] {
+    margin-left: 9; /* Adjust checkbox on smaller screens */
+  }
+}
+
+    /* External CSS for Visit Section */
+.visit-section {
+  position: relative;
+  padding: 50px 20px;
+  background-color: rgba(124,93,162,1);
+  
+  filter: brightness(75%);
+  background-size: cover;
+  font-weight: 400;
+}
+
+.visit-section .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.2);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.visit-section h2 {
+  position: relative;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+  margin-right: 80px;
+  color: #440961;
+  text-shadow: 1px 1px 2px #440961;
+  animation: slideUp 4s ease-out;
+  z-index: 2;
+}
+
+.visit-section h2.title {
+  font-size: 3rem;
+  color: #FFFFFF;
+  animation: slideUp 4.5s ease-out;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.visit-section p {
+  position: relative;
+  margin-bottom: 30px;
+  text-align: center;
+  animation: slideUp 5s ease-out;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: #440961;
+  z-index: 2;
+}
+
+.visit-section .content-box {
+  flex: 1 1 40%;
+  background-color: #35074c;
+  padding: 10px;
+  border-radius: 30px;
+  color:#35074c ;
+  border: 2px solid #FFFFFF;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  line-height: 1.1;
+  z-index: 2;
+}
+
+.visit-section .content-box p {
+  line-height: 1.8;
+  color: #FFFFFF;
+  font-size: 20px;
+ 
+}
+
+.visit-section .content-box hr {
+  border: none;
+  border-top: 2px solid rgb(249, 244, 244);
+  margin: 10px 0;
+  
+}
+
+.visit-section .map {
+  flex: 1 1 45%;
+  padding: 50px;
+  color: #212121;
+  float: right;
+}
+
+.visit-section .map iframe {
+  border: 0;
+  border-radius: 10px;
+  color: #212121;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .visit-section {
+    padding: 20px;
+  }
+
+  .visit-section h2,
+  .visit-section h2.title {
+    font-size: 1.5rem;
+    margin-right: 0;
+  }
+
+  .visit-section .content-box {
+    flex: 1 1 100%;
+    margin-left: 0;
+  }
+
+  .visit-section .map {
+    padding: 20px;
+  }
+}
+
+.head-container {
+  background-color: rgba(124,93,162,1);
+  color: #fff;
+  min-height: 10vh;
+  font-family: Arial, sans-serif;
+  background-image: url('https://thrivefairhope.com/wp-content/uploads/2018/04/26231671_1054425194710087_3532788201816619564_n.jpg');
+  filter: brightness(95%);
+  background-blend-mode: screen;
+  box-shadow: -10px 10px 15px rgba(0, 0, 0, 0.3);
+  background-size: cover;
+  position: relative;
+  height: 100vh;
+  animation: slideUp 4s ease-out;
+}
+/* 
+.header {
+  padding: 2rem;
+  text-align: left;
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #000;
+  margin-left: 100px;
+  animation: slideUp 4s ease-out;
+}
+
+.header p {
+  font-size: 1rem;
+  font-weight: 400;
+  margin-left: 100px;
+  color: #000;
+  animation: slideUp 4s ease-out;
+}
+
+.header button {
+  background-color: #dfff00;
+  color: #000;
+  padding: 1rem 6rem;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 1rem;
+  margin-left: 100px;
+  animation: slideUp 4s ease-out;
+}
+ */

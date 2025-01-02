@@ -1,0 +1,159 @@
+
+
+.blog-container {
+    /* background-image: url('D:/Internship - greenwill/Task6/YogaSite/front-end/src/Images/img8.jpg'); */
+    /* background: rgb(219,147,255);
+    background: linear-gradient(0deg, rgba(219,147,255,1) 0%, rgb(77, 19, 106) 100%); */
+    background: rgb(204,161,255);
+    /* background: linear-gradient(0deg, rgba(204,161,255,1) 0%, rgba(124,93,162,1) 100%); */
+    margin-top: 85px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 10px;
+    background-color: transparent;
+    color: #fff;
+    padding: 0;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    text-decoration: none;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.5s ease;
+    animation: blogContainer 1s ease-out forwards;
+  }
+
+  
+@keyframes blogContainer {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+  
+
+  .blog-container:hover{
+    cursor: pointer;
+  }
+  
+  .blog-card {
+    margin-top: 20px;
+    background: #440961;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 430px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: transform 0.6s ;
+    border: 2px solid #cf5eff;
+  
+  }
+  
+  .blog-card:hover {
+    transform: translateY(-5px);
+    
+  }
+  
+  .blog-image {
+    height: 260px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    transition: opacity 0.6s ease, transform 0.6s; /* Apply smooth transition for opacity and transform */
+    box-shadow: inset 0 0 40px 25px #440961;
+    opacity: .4;
+  }
+
+  .blog-image:hover{
+    opacity: .8;
+  }
+
+  .blog-date {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 10px 10px;
+    width: 90%;
+    display: flex;
+    border-radius: 5px;
+    justify-content: space-between;
+  }
+  
+  .blog-date p{
+    margin: 0;
+    font-size: 14px;
+    justify-content: flex-start;
+  }
+
+  .blog-content {
+    padding: 15px;
+  }
+  
+  .blog-content h3 {
+    margin: 0 0 10px;
+    font-size: 18px;
+    color: #cf5eff;
+    text-decoration: none;
+
+  }
+  
+  .blog-content p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #ddd;
+  }
+  
+  .blog-date .hover-icon {
+    color: #ffffff;
+  }
+  
+  .blog-date .hover-icon:hover {
+    color: #cf5eff;
+  }
+  
+
+  
+  @media (max-width: 768px) {
+
+    .blog-card {
+        margin-top: 20px;
+        background: #440961;
+        border-radius: 8px;
+        overflow: hidden;
+        width: 430px;
+        height: 400px;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        transition: transform 0.6s ;
+        border: 2px solid #cf5eff;
+      
+      }
+    
+
+    .blog-container{
+      margin-top: 30px;
+    }
+
+    .blog-card {
+      width: 100%;
+    }
+  }
+  
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .blog-card {
+      width: 45%;
+    }
+  }
+  

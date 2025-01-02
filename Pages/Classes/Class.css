@@ -1,0 +1,690 @@
+.main {
+  /* background-color:  #1a9968; */
+  background-color: rgba(124, 93, 162, 1);
+  /* scroll-behavior: smooth; */
+  margin: 0;
+  padding: 0;
+  height: 90%;
+}
+
+.hero,
+.r1 {
+  padding: 20px;
+  margin-left: 60px;
+  position: relative;
+  margin-top: -450px;
+  margin-bottom: 250px;
+}
+
+.r1 {
+  margin-top: 50px;
+
+}
+
+.hero .content {
+  height: 180px;
+}
+
+.hero .content h2,
+.r1 .content h2 {
+  color: #440961;
+  margin: 0px;
+  font-size: 17px;
+}
+
+.hero .content h1,
+.r1 .content h1 {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 64px;
+  margin: 0px;
+  color: white;
+  letter-spacing: 1.28px;
+  font-weight: 400;
+}
+
+.hero .content p,
+.r1 .content p {
+  color: #440961;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+}
+@media (max-width: 768px) {
+  .hero .content h1{
+    font-size: 70px;
+    margin-top: 30px;
+    margin-left: -55px;
+  
+  }
+  .hero .content p{
+    margin-top: 20px;
+    margin-bottom: 90x;
+    font-size: 16px;
+    margin-left: -55px;
+  }
+.hero .content h2{
+  margin-top: 200px;
+  margin-left: -55px;
+}
+
+}
+
+
+.bg-cover {
+  background-image: url('D:/Internship - greenwill/Task6/YogaSite/front-end/src/Pages/Classes/pics/img10.jpg');
+  width: 100%;
+  height: 500px;
+  z-index: -1;
+  /* box-shadow: 0px -11px 10px 10px #CAA3EF inset; */
+  box-shadow:
+    inset 0px 10px 100px -100px rgba(124, 93, 162, 1),
+    /* Top blur effect */
+    inset 0px -20px 20px -5px rgba(124, 93, 162, 1);
+  /* Bottom blur effect */
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  opacity: .3;
+}
+
+
+@media (max-width: 768px) {
+  .bg-cover{
+    height: 300px;
+  }
+}
+
+.container-wrapper {
+  margin-top: 250px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+  background-color: transparent;
+  color: #fff;
+}
+
+.container {
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s;
+  height: 447px;
+  width: 380px;
+  border: 1px solid #ffffff;
+  transition: transform 0.3s;
+}
+
+
+.class-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  /* Ensures text is visible on background */
+  text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+  /* Adds contrast for text */
+  padding: 20px;
+  border-radius: 10px;
+  height: 430px;
+  /* Adjust height as needed */
+  width: 90%;
+  /* Adjust width as needed */
+  background-color: transparent;
+  /* opacity: .7; */
+}
+
+
+.class-card .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 110%;
+  /* background-color: rgba(24, 23, 23, .7); */
+  background-color: rgba(124, 93, 162, .5);
+  /* Adjust transparency */
+  z-index: 1;
+  /* Place it behind text but above background */
+}
+
+.class-card .bck {
+  position: relative;
+  z-index: 2;
+  /* Ensures text appears above the overlay */
+  text-align: center;
+  justify-content: center;
+  margin-top: -50px;
+}
+
+
+
+.class-card h2 {
+  color: rgb(255, 255, 255);
+}
+
+.class-card p {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  font-size: 16px;
+  line-height: normal;
+  text-align: left;
+  line-height: 1.5;
+  color: rgb(255, 255, 255);
+}
+
+
+
+.bck .more-details-btn {
+  padding: 10px 20px 10px 20px;
+  margin-top: 20px;
+  margin-bottom: -50px;
+  margin-inline-start: 0px;
+  height: 57px;
+  width: 300px;
+  position: relative;
+  font-size: 18px;
+  /* background-color: #23bda6; */
+  background-color: #440961;
+  font-weight: 700;
+  color: white;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 18px;
+  border-radius: 14px;
+  transition: transform 0.3s;
+  z-index: 2;
+}
+
+.bck .more-details-btn:hover {
+  transform: translateY(-5px);
+}
+
+.more-details-btn::before,
+.more-details-btn::after {
+  content: "";
+  position: absolute;
+  width: 3px;
+  /* Small width for the bars */
+  background-color: #fff;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  opacity: 0;
+  /* Initially hidden */
+}
+
+/* Larger bar on the left side */
+.more-details-btn::before {
+  left: 80px;
+  /* Adjust position */
+  top: 50%;
+  transform: translateY(-50%) scaleY(0);
+  /* Initially hidden */
+  height: 22px;
+  /* Larger bar height */
+}
+
+/* Larger bar on the right side */
+.more-details-btn::after {
+  right: 80px;
+  /* Adjust position */
+  top: 50%;
+  transform: translateY(-50%) scaleY(0);
+  /* Initially hidden */
+  height: 22px;
+  /* Larger bar height */
+}
+
+/* Smaller bar on the left side */
+.extra-bar-left {
+  position: absolute;
+  left: 73px;
+  /* Adjust position for smaller bar */
+  top: 50%;
+  transform: translateY(-50%) scaleY(0);
+  /* Initially hidden */
+  height: 13px;
+  /* Smaller bar height */
+  width: 3px;
+  background-color: #fff;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  opacity: 0;
+  /* Initially hidden */
+}
+
+/* Smaller bar on the right side */
+.extra-bar-right {
+  position: absolute;
+  right: 73px;
+  /* Adjust position for smaller bar */
+  top: 50%;
+  transform: translateY(-50%) scaleY(0);
+  /* Initially hidden */
+  height: 13px;
+  /* Smaller bar height */
+  width: 3px;
+  background-color: #fff;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  opacity: 0;
+  /* Initially hidden */
+}
+
+.more-details-btn:hover {
+  background-color: #440961;
+  color: #fff;
+  /* transform: translateY(-8px); */
+}
+
+/* Make the bars appear on hover */
+.more-details-btn:hover::before,
+.more-details-btn:hover::after,
+.more-details-btn:hover .extra-bar-left,
+.more-details-btn:hover .extra-bar-right {
+
+  transform: translateY(-50%) scaleY(1);
+  /* Make the bars grow on hover */
+  opacity: 1;
+  /* Make the bars visible */
+}
+
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .container {
+    flex-basis: 100%;
+  }
+  
+  
+}
+
+.details {
+  justify-content: space-between;
+  display: flex;
+  border-radius: 6px;
+  border: 1px solid rgb(255, 255, 255);
+  height: 70px;
+  width: 94%;
+  padding: 10px 10px 10px 10px;
+  background-color: #0d0d0d;
+  opacity: 70%;
+  color: #ffffff;
+  margin-top: 40px;
+
+}
+
+span {
+  display: flex;
+  font-size: 16px;
+  position: relative;
+  text-align: left;
+
+}
+
+
+
+.sub {
+  margin-top: 150px;
+  padding-top: 0px;
+  display: flex;
+  gap: 60px;
+  height: 750px;
+  /* Parent container occupies the full viewport height */
+  overflow: hidden;
+  /* Prevents scrolling on the parent container */
+  margin-bottom: 50px;
+  padding-bottom: 50px;
+}
+
+
+
+.r1 {
+  flex: 1;
+  position: sticky;
+  /* Keeps .r1 fixed in its position */
+  top: 0;
+  /* Ensures it stays at the top of the viewport */
+  align-self: flex-start;
+  max-width: 60%;
+  padding: 20px;
+  height: 20%;
+}
+
+.r2 {
+  flex: 1;
+  max-width: 40%;
+  overflow-y: scroll;
+  /* Enables vertical scrolling */
+  padding: 20px;
+  height: 100%;
+  /* Ensures it occupies the full height of the parent */
+  scrollbar-width: none;
+  /* Hides scrollbar in Firefox */
+  -ms-overflow-style: none;
+  /* Hides scrollbar in IE and Edge */
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+  background-attachment: fixed;
+}
+
+.r2::-webkit-scrollbar {
+  display: flex;
+  /* Hides scrollbar in WebKit-based browsers */
+}
+
+/* Optional hover effect */
+.r2:hover {
+  cursor: pointer;
+  /* Indicates scrollable behavior */
+}
+
+/* Main Wrapper for Scroll Section */
+.scroll-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  width: 100%;
+  height: auto;
+  padding: 20px;
+  background-color: transparent;
+  scroll-behavior: smooth;
+  /* Adjust background as needed */
+}
+
+/* Scroll Box Styling */
+.scroll-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transform: translateY(50px);
+  opacity: 0;
+  width: 450px;
+  background-color: rgba(124, 93, 162, 1);
+  height: 450px;
+  transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+  scroll-behavior: smooth;
+  box-shadow: 0 8px 6px rgba(0, 0, 0, 0.6);
+}
+
+.scroll-box.visible {
+  transform: translateY(0);
+  opacity: 1;
+  margin-bottom: 30px;
+  border: 1px solid #fff;
+}
+
+/* Image Styling */
+.scroll-image {
+  width: 97%;
+  height: 65%;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Content Styling */
+.scroll-content {
+  flex-grow: 1;
+}
+
+.scroll-content h2 {
+  font-size: 20px;
+  color: rgb(255, 255, 255);
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.scroll-content p {
+  font-size: 15px;
+  color: rgb(255, 255, 255);
+  margin-top: 5px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.scroll-content .icon {
+  display: flex;
+  gap: 20px;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  /* Main container adjustment for column layout */
+  .sub {
+    flex-direction: column; /* Stack items vertically */
+    display: flex;
+    gap: 20px; /* Add spacing between stacked elements */
+    height: auto; /* Allow content height to adjust dynamically */
+    overflow: visible; /* Ensure content is fully visible */
+    padding: 10px; /* Add spacing around content */
+    margin-top: 10px;
+  }
+
+  /* Adjust .r1 and .r2 for responsive behavior */
+  .r1,
+  .r2 {
+    max-width: 100%; /* Full-width for column layout */
+    height: auto; /* Adjust height to fit content */
+    flex-basis: 100%; /* Ensure elements occupy the full width */
+    position: relative; /* Remove sticky positioning */
+    padding: 15px; /* Add spacing for content */
+    align-self: stretch; /* Stretch to container width */
+  }
+
+  /* Ensure .r1 appears first */
+  .r1 {
+    order: 1;
+    margin: 0;
+  }
+
+  /* Ensure .r2 appears second */
+  .r2 {
+    order: 2;
+    overflow-y: visible; /* Remove scroll behavior */
+    padding-bottom: 20px; /* Add spacing below content */
+  }
+
+  /* Adjust .scroll-box for responsive display */
+  .scroll-box {
+    width: 90%; /* Occupy full width in responsive layout */
+    margin-bottom: 20px; /* Add spacing between scroll-box items */
+    padding: 10px; /* Adjust padding for better spacing */
+    box-shadow: none; /* Simplify shadow in responsive view */
+  }
+
+  /* Adjust scroll images and icons inside scroll-box */
+  .scroll-image {
+    width: 100%; /* Full-width images */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Keep rounded corners */
+    object-fit: cover; /* Ensure images fit nicely */
+  }
+
+  /* Adjust scroll content text styles */
+  .scroll-content {
+    text-align: center; /* Center text for better alignment */
+    padding: 10px; /* Add spacing around text */
+  }
+
+  .scroll-content h2 {
+    font-size: 18px; /* Slightly smaller heading text */
+    margin-bottom: 10px;
+  }
+
+  .scroll-content p {
+    font-size: 14px; /* Adjust paragraph text size */
+    margin-top: 5px;
+  }
+
+  /* Adjust icons in scroll content */
+  .scroll-content .icon {
+    gap: 100px; /* Reduce spacing between icons */
+    justify-content: center; /* Center icons */
+    align-items: center; /* Align icons vertically */
+  }
+}
+
+/* Add keyframes for animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInBottomToTop {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+    /* Start from below */
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    /* End at the normal position */
+  }
+}
+
+@keyframes slideInTopToBottom {
+  from {
+    opacity: 0;
+    transform: translateY(-100px);
+    /* Start from above */
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    /* End at the normal position */
+  }
+}
+
+/* Apply animations to specific elements */
+.main {
+  animation: fadeIn 1s ease-out forwards;
+}
+
+.hero,
+.r1 {
+  animation: slideInBottomToTop 1.5s ease-out forwards;
+  /* Animate from bottom to top */
+}
+
+.r2 {
+  animation: slideInBottomToTop 1.5s ease-out forwards;
+  /* Animate from bottom to top */
+}
+
+.scroll-wrapper {
+  opacity: 0;
+  /* Start invisible */
+  animation: fadeIn 2s ease-out forwards;
+  /* Fade-in effect */
+}
+
+/* Animate scroll-box items individually */
+.scroll-box {
+  opacity: 0;
+  /* Start invisible */
+  transform: translateY(50px);
+  /* Start slightly below */
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+/* Delay animation for individual scroll boxes to create a cascade effect */
+.scroll-box:nth-child(1) {
+  animation-delay: 0.3s;
+}
+
+.scroll-box:nth-child(2) {
+  animation-delay: 0.6s;
+}
+
+.scroll-box:nth-child(3) {
+  animation-delay: 0.9s;
+}
+
+/* General transition for hover and cursor interactions */
+.r2:hover {
+  cursor: pointer;
+  /* Indicates scrollable behavior */
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* 
+/* Add transitions to buttons */
+/*
+.more-details-btn {
+  animation: fadeIn 1.5s ease-out forwards;
+  transition: background-color 0.3s, transform 0.3s;
+} */
+
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .sub {
+    flex-direction: column;
+  }
+
+  .r1,
+  .r2 {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .scroll-box {
+    width: 90%;
+  }
+.icon h5{
+  margin-left: -30px;
+  font-size: 16px;
+}
+
+}
+
+.icon {
+  font-weight: bold;
+  color: #fff;
+}
+
+.icon h5{
+  font-size: 16px;
+}
+
+
+.more-button button {
+  color: #fff;
+  background-color: transparent;
+  border: 2px solid white;
+  padding: 10px 20px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  float: right;
+  border-radius: 8px;
+  width: 300px;
+  height: 70px;
+
+}
+
+.more-button button:hover{
+  background-color: white;
+  color:#440961;
+}
